@@ -55,7 +55,7 @@ class SoftwareDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how softwares are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(software)
-  #   "Software ##{software.id}"
-  # end
+  def display_resource(software)
+    "#{software.variant.brand.title}-#{software.variant.title}-#{software.title}"
+  end
 end

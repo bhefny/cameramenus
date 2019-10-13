@@ -59,7 +59,7 @@ class VariantDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how variants are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(variant)
-  #   "Variant ##{variant.id}"
-  # end
+  def display_resource(variant)
+    "#{variant.brand.title}-#{variant.title}"
+  end
 end

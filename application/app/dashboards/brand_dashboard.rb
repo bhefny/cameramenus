@@ -55,7 +55,7 @@ class BrandDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how brands are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(brand)
-  #   "Brand ##{brand.id}"
-  # end
+  def display_resource(brand)
+    brand.title
+  end
 end
