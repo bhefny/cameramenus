@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-brand = Camera::Brand.create(title: 'Arri')
-Camera::Variant.create(title: 'R11', brand: brand)
+brand = Brand.create(title: 'Arri')
+Variant.create(title: 'R11', brand: brand)
