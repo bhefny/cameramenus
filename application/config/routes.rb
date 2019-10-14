@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :softwares
       resources :brands
       resources :variants
+      resources :menus
 
       root to: "softwares#index"
     end

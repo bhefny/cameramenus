@@ -16,9 +16,17 @@ ActiveRecord::Schema.define(version: 2019_10_13_220937) do
     t.string "title"
   end
 
+  create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "software_id"
+    t.integer "parent_menu_id"
+    t.string "title"
+    t.integer "level"
+  end
+
   create_table "softwares", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "variant_id"
     t.string "title"
+    t.text "menu_markup"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
