@@ -1,5 +1,4 @@
 class Software < ApplicationRecord
-  include MenuParser
 
 
   # callbacks
@@ -12,7 +11,19 @@ class Software < ApplicationRecord
   private
 
   def rebuild_menu
-    self.menus.delete_all
-    self.parse_create
+    unless menu_markup.empty?
+      markups = MarkupParser.parse(menu_markup)
+      self.menus.delete_all
+      menu_parent = nil
+      markups.each do |options|
+        options.merge!(software_id: self.id)
+        if options[:level].zero?
+          menu_parent = Menu.create(options)
+        else
+          options.merge!(parent_menu_id: menu_parent.try(:id))
+          Menu.create(options)
+        end
+      end
+    end
   end
 end
