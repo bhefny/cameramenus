@@ -16,10 +16,8 @@ User.create!({email: "bhefny@gmail.com", password: "12345678", password_confirma
   3.times.each do |variant_id|
     variant = Variant.create(title: "#{brand.title[0].upcase}#{brand.id}#{variant_id}", brand: brand)
     1.times.each do |software_id|
-      software = Software.create(title: "V0.#{software_id}", variant: variant)
-      m = Menu.create(software: software, title: "file", level: 0)
-      Menu.create(software: software, title: "quit", level: 1, parent_id: m.id)
-
+      markup = "File\r\n-New File\r\n-Open File [monkey, balls]\r\nEdit\r\n-Undo\r\n-Redo\r\n-Find\r\n--Previous [monkey]\r\n--Next\r\n-Replace"
+      software = Software.create(title: "V0.#{software_id}", variant: variant, menu_markup: markup)
     end
   end
 end
