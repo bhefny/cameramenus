@@ -1,4 +1,4 @@
-class CreateCameraVariant < ActiveRecord::Migration[6.0]
+class CreateCameraVariant < ActiveRecord::Migration[5.2]
   def change
     create_table :variants do |t|
       t.integer :brand_id

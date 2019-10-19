@@ -1,4 +1,4 @@
-class CreateCameraMenu < ActiveRecord::Migration[6.0]
+class CreateCameraMenu < ActiveRecord::Migration[5.2]
   def change
     create_table :menus do |t|
       t.integer :software_id
