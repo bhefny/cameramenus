@@ -18,7 +18,7 @@ User.create!({email: "bhefny@gmail.com", password: "12345678", password_confirma
     1.times.each do |software_id|
       software = Software.create(title: "V0.#{software_id}", variant: variant)
       m = Menu.create(software: software, title: "file", level: 0)
-      Menu.create(software: software, title: "quit", level: 1, parent_menu_id: m.id)
+      Menu.create(software: software, title: "quit", level: 1, parent_id: m.id)
 
     end
   end

@@ -50,6 +50,6 @@ as well as a link to its edit page.
 
 <dt class="attribute-label" id="title">Menu Tree</dt>
 <dd class="attribute-data attribute-data--string">
-  <%= page.resource.menus_hash %>
+  <%= render 'menus_tree', children: page.resource.menus.arrange_serializable %>
 </dd>
 

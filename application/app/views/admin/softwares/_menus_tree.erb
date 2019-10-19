@@ -1,0 +1,10 @@
+<table>
+<% children.each do |child| %>
+  <tr>
+    <td><%= child['title'] %></td>
+    <td>
+      <%= render 'menus_tree', children: child['children'] %>
+    </td>
+  </tr>
+<% end %>
+</table>

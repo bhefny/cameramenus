@@ -9,10 +9,10 @@ class MenuDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     software: Field::BelongsTo,
-    parent_menu: Field::BelongsTo.with_options(class_name: "Menu"),
+    parent: Field::BelongsTo.with_options(class_name: "Menu"),
     menus: Field::HasMany,
     id: Field::Number,
-    parent_menu_id: Field::Number,
+    parent_id: Field::Number,
     title: Field::String,
     level: Field::Number,
   }.freeze
@@ -25,7 +25,6 @@ class MenuDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
   software
   title
-  parent_menu
   level
   id
   ].freeze
@@ -34,9 +33,8 @@ class MenuDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
   software
-  parent_menu
   id
-  parent_menu_id
+  parent_id
   title
   level
   ].freeze
@@ -46,8 +44,7 @@ class MenuDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   software
-  parent_menu
-  parent_menu_id
+  parent_id
   title
   level
   ].freeze

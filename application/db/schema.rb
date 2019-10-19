@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 2019_10_13_220937) do
 
   create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "software_id"
-    t.integer "parent_menu_id"
     t.string "title"
     t.integer "level"
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_menus_on_ancestry"
   end
 
   create_table "softwares", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
