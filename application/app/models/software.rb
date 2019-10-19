@@ -8,22 +8,32 @@ class Software < ApplicationRecord
   belongs_to :variant
   has_many :menus, dependent: :destroy
 
-  private
+  def menus_hash
+    results = {}
+    # menus.order(:id).each do |menu|
+    #   x = {title: menu.title, children: {}}
+    #   if menu.parent_menu_id
+    #     results[menu.parent_menu_id][:children][menu.id] = x
+    #   else
+    #     results[menu.id] = x
+    #   end
+    # end
+
+    results
+  end
 
   def rebuild_menu
     unless menu_markup.empty?
       markups = MarkupParser.parse(menu_markup)
       self.menus.delete_all
-      menu_parent = nil
+      levels = {}
       markups.each do |options|
         options.merge!(software_id: self.id)
-        if options[:level].zero?
-          menu_parent = Menu.create(options)
-        else
-          options.merge!(parent_menu_id: menu_parent.try(:id))
-          Menu.create(options)
-        end
+        options.merge!(parent_menu_id: levels[options[:level] - 1]) unless options[:level].zero?
+        levels[options[:level]] = Menu.create(options).id
       end
     end
   end
+
+  private
 end
