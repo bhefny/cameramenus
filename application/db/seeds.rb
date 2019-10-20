@@ -11,7 +11,7 @@ Brand.destroy_all
 
 # User.create!({email: "bhefny@gmail.com", password: "12345678", password_confirmation: "12345678" })
 
-%w(Arri).each do |brand_title|
+%w(Sublime).each do |brand_title|
   brand = Brand.create(title: brand_title)
   3.times.each do |variant_id|
     variant = Variant.create(title: "#{brand.title[0].upcase}#{brand.id}#{variant_id}", brand: brand)

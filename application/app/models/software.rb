@@ -20,7 +20,8 @@ class Software < ApplicationRecord
         created_menu = Menu.create(attributes)
         levels[options[:level]] = created_menu.id
         options[:tags].each do |tag|
-
+          created_menu.tag_list.add(tag)
+          created_menu.save
         end
       end
     end
