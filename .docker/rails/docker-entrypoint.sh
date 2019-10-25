@@ -10,6 +10,8 @@ echo -n "" > /app/log/test.log
 bundle install
 yarn install
 
+bin/./webpack-dev-server  &
+
 
 
 

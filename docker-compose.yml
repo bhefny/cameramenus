@@ -4,6 +4,7 @@ services:
     image: mariadb:10.4
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    command: mysqld --sql_mode="" --character-set-server=utf8 --init-connect='SET NAMES UTF8;'
     volumes:
       - cameramenus_db:/var/lib/mysql
   rails:
@@ -16,13 +17,14 @@ services:
       DATABASE_HOST: 'mariadb'
       DATABASE_USER: 'root'
       DATABASE_PASSWORD: ''
+      RAILS_ENV: development
     ports:
       - "3000:3000"
+      - "3035:3035"
     volumes:
       - cameramenus_gems:/usr/local/bundle
       - ./application:/app
       - ./.docker/rails/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
-
   # nginx:
   #   image: nginx
   #   ports:

@@ -27,5 +27,4 @@ class Software < ApplicationRecord
     end
   end
 
-  private
 end
