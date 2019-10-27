@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2019_10_20_185860) do
 
-  create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "brands", force: :cascade do |t|
     t.string "title"
   end
 
-  create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "menus", force: :cascade do |t|
     t.integer "software_id"
     t.string "title"
     t.integer "level"
@@ -24,13 +27,13 @@ ActiveRecord::Schema.define(version: 2019_10_20_185860) do
     t.index ["ancestry"], name: "index_menus_on_ancestry"
   end
 
-  create_table "softwares", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "softwares", force: :cascade do |t|
     t.integer "variant_id"
     t.string "title"
     t.text "menu_markup"
   end
 
-  create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -49,13 +52,13 @@ ActiveRecord::Schema.define(version: 2019_10_20_185860) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", collation: "utf8_bin"
+  create_table "tags", id: :serial, force: :cascade do |t|
+    t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -67,7 +70,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_185860) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "variants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "variants", force: :cascade do |t|
     t.integer "brand_id"
     t.string "title"
   end
