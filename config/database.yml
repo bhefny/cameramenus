@@ -27,4 +27,4 @@ test:
 
 production:
   <<: *default
-  database: cameramenus_production
+  database: <%= ENV['DATABASE_NAME'] %>
