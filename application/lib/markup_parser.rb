@@ -18,9 +18,11 @@ class MarkupParser
     def convert_to_menu(markups)
       markups.map do |s|
         {
+          source: s,
           level: extract_level(s),
           title: extract_title(s),
           tags: extract_tags(s),
+          relations: extract_relations(s),
         }
       end
 
@@ -31,12 +33,19 @@ class MarkupParser
     end
 
     def extract_title(s)
+      s = s.dup
       s.gsub!(/^[\- ]*/, '\2')
-      s.gsub(/(.*)\[(.*)\]/, '\1').strip
+      s.gsub!(/(.*)\[(.*)\]/, '\1')
+      s.gsub!(/(.*)\{(.*)\}/, '\1')
+
+      s.strip
     end
 
     def extract_tags(s)
       s.match(/\[(.*)\]/).try(:[], 1).to_s.split(',').map(&:strip)
+    end
+    def extract_relations(s)
+      s.match(/\{(.*)\}/).try(:[], 1).to_s.split(',').map(&:strip)
     end
   end
 end
