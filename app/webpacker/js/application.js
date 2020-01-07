@@ -17,5 +17,5 @@
 import 'bootstrap';
 import "../css/application.scss";
 
-console.log('Hello World from Webpacker')
-console.log(process.env.NODE_ENV)
+// console.log('Hello World from Webpacker')
+// console.log(process.env.NODE_ENV)
