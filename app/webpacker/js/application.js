@@ -17,11 +17,11 @@
 import 'bootstrap';
 import 'jquery';
 import 'patternfly-bootstrap-treeview';
-// require('bootstrap-treeview');
+import "@fortawesome/fontawesome-free/js/all";
+
+
 import "../css/application.scss";
 
-// console.log('Hello World from Webpacker')
-// console.log(process.env.NODE_ENV)
 
 $(function() {
 
