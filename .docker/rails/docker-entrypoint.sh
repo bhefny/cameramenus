@@ -14,7 +14,8 @@ yarn install
 echo "PATH=$PATH:/app/node_modules/.bin" > /root/.bashrc
 echo '{ "allow_root": true }' > /root/.bowerrc
 
-./bin/webpack --watch --colors --progress  &
+# ./bin/webpack --watch --colors --progress  &
+./bin/webpack-dev-server &
 
 
 
