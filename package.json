@@ -9,7 +9,6 @@
     "bootstrap": "^4.4.1",
     "bower": "^1.8.8",
     "jquery": "^3.4.1",
-    "patternfly-bootstrap-treeview": "^2.1.10",
     "phantomjs": "^2.1.7",
     "popper.js": "^1.16.0",
     "prop-types": "^15.7.2",

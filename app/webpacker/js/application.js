@@ -14,17 +14,15 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import 'bootstrap';
 import 'jquery';
-import 'patternfly-bootstrap-treeview';
-FontAwesomeConfig = {
-  autoReplaceSvg: false,
-  dataAutoReplaceSvg: "nest"
-}
+import 'bootstrap';
+
 import "@fortawesome/fontawesome-free/js/all";
+
 
 
 import "../css/application.scss";
 
 
-import './tree_view'
+// import './tree'
+// import './tree_view'

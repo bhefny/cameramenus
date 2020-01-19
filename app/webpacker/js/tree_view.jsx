@@ -54,13 +54,7 @@ $(function() {
       }
     ];
 
-  $('#treeview6').treeview({
-    color: "#428bca",
-    expandIcon: "fas fa-camera",
-    collapseIcon: "fas fa-brain",
-    // nodeIcon: "fas fa-car",
-    showTags: true,
-    data: defaultData
-  });
+
+
 
 });
