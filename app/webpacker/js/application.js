@@ -15,14 +15,13 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'jquery';
-import 'bootstrap';
+import 'materialize-css';
 
-import "@fortawesome/fontawesome-free/js/all";
 
 
 
 import "../css/application.scss";
 
 
-// import './tree'
-// import './tree_view'
+import './index1'
+

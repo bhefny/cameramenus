@@ -1,8 +1,10 @@
 
 $(function() {
 
+  $('select').formSelect();
+    M.AutoInit();
 
-   var defaultData = [
+  var defaultData = [
       {
         text: 'Parent 1',
         href: '#parent1',
@@ -53,8 +55,4 @@ $(function() {
         tags: ['0']
       }
     ];
-
-
-
-
 });

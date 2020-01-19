@@ -1,78 +1,72 @@
-<div class="jumbotron">
-  <h1 class="display-4">Hello!</h1>
-  <form class="form-inline">
-    <div class="form-group mx-sm-3 mb-2">
-      <select class="form-control form-control-lg">
-        <option>Cameras</option>
-      </select>
-      <input type="text" class="form-control form-control-lg" id="inputPassword2" placeholder="search keyword">
+<!-- <div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center teal-text text-lighten-2">Hello!</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+      <div class="row center">
+        <div class="input-field col s12">
+          <form>
+
+          <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Materialize Select</label>
+          <button type="submit" class="btn btn-primary mb-2 form-control-lg">search..</button>
+          </form>
+        </div>
+
+      </div>
+      <br><br>
+
     </div>
-    <button type="submit" class="btn btn-primary mb-2 form-control-lg">search..</button>
-  </form>
+  </div>
+
 </div>
-<hr>
+ -->
 
-<div id="tree"></div>
+<h2>Cameras</h2>
+<ul class="collapsible">
+  <% @brands.each do |brand| %>
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">camera_alt</i>
+      <%= brand.title %>
+      <span class="badge blue"><%= brand.variants.count %></span>
+    </div>
+    <div class="collapsible-body">
 
-<hr>
-<span style="font-size: 3em; color: Tomato;">
-  <i class="fas fa-camera"></i>
-</span>
+      <ul class="collapsible">
+        <% brand.variants.each do |variant| %>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">camera</i>
+            <%= variant.title %>
+            <span class="badge blue"><%= variant.softwares.count %></span>
+          </div>
+          <div class="collapsible-body">
 
-<span style="font-size: 48px; color: Dodgerblue;">
-  <i class="fas fa-camera"></i>
-</span>
-
-<span style="font-size: 3rem;">
-  <span style="color: Mediumslateblue;">
-  <i class="fas fa-camera"></i>
-  </span>
-</span>
-<hr>
-  <i class="fas fa-brain"></i>
-<hr>
-<div class="media">
-  <img src="<%= image_path('logo.png') %>" width="90" height="90" alt="">
-  <div class="media-body">
-    <h5 class="mt-0">Product</h5>
-    can be any type of product like, camera , monitor...etc <br>
-    ...has brands
-
-    <div class="media mt-3">
-      <img src="<%= image_path('logo.png') %>" width="90" height="90" alt="">
-      <div class="media-body">
-        <h5 class="mt-0">Brand</h5>
-        All brands available for this product like Samsung, Sony....etc <br>
-        ...has variants
-
-        <div class="media mt-3">
-          <img src="<%= image_path('logo.png') %>" width="90" height="90" alt="">
-          <div class="media-body">
-            <h5 class="mt-0">Variant</h5>
-            For each brand there variant like Galaxy 7 or macbook pro<br>
-            ...has S/Ws
-
-            <div class="media mt-3">
-              <img src="<%= image_path('logo.png') %>" width="90" height="90" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Software version</h5>
-                Each variant can be running a different software version<br>
-                ...has Menu
-
-                <div class="media mt-3">
-                  <img src="<%= image_path('logo.png') %>" width="90" height="90" alt="">
-                  <div class="media-body">
-                    <h5 class="mt-0">Menu breakdown</h5>
-                    each S/W has a full menu to be displayed and indexed<br>
-                  </div>
-                </div>
-
-              </div>
+            <div class="collection">
+              <% variant.softwares.each do |firmware| %>
+              <a href="<%= firmware_path(firmware.id) %>" class="collection-item">
+                <i class="material-icons">send</i>
+                <%= firmware.title %>
+              </a>
+              <% end %>
             </div>
 
           </div>
-        </div>
-      </div>
+        </li>
+        <% end %>
+      </ul>
+
+
     </div>
-  </div>
-</div>
+  </li>
+  <% end %>
+</ul>

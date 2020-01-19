@@ -1,0 +1,566 @@
+Recording [file, format, codec]
+-Recording Codec [compresion, container,
+--Prores 422 LT
+--Prores 422
+--Prores 422 HQ
+--Prores 444
+--Prores 444 XQ
+--ARRIRAW [raw]
+-Resolution [aspect, ratio, letter, squeeze]
+--S 16 HD
+--HD
+--HD Anamorpic
+--4K
+--2.39 2K Anamorphic
+--3.2K
+--4K UHD
+--4:3 2.8K
+-Project Settings
+--Project Rate [fps, frame, rate]
+---23.97p - 60p [user input]
+--Next Reel Count [card, reel, name, number]
+---XXX [user input]
+--Camera Index [cam, CamA]
+---X [user input]
+--Camera ID prefix
+---X [user input]
+--Lens squeeze factor {C10, C12} [anamorphic, factor]
+---1.0 - 2.0
+-Record Mode [speed, time, lapse]
+--Record Mode
+---Normal
+---Interval
+---Stop Motion
+--Interval length {C21} [time, lapse]
+--Burst Length {C21}
+--Duration mode {C21}
+---Preset
+---Manual
+--Recording duration {C21-C25}
+---XXh XXm XXs [user input]
+--Resulting clip length {C21-C25}
+---Xh XXm XXs [user input]
+--Stop motion beeper {C21}
+---☑
+-Rec beeper/tally [sound, beep, notification, audio]
+--Rec start beeper
+---☑
+--Rec stop beeper
+---☑
+--Card full beeper
+---☑
+--tally MVF-1
+---☑
+-Prerecording max. duration
+--XXs [user input]
+-Audio recording [sound]
+--Audio recording [sound]
+---☑
+--Channel 1 control
+---Manual
+---Manual (+L)
+---Auto
+--Chanel 1 gain
+---XX dB
+--Channel 2 control
+---Manual
+---Manual (+L)
+---Auto
+--Chanel 2 gain
+---XX dB
+--Test tone
+---on/off
+Media [card, USB, SD, Cfast, storage]
+-Erase CARD [format, delete]
+-Delete last clip
+-Prepare USB medium [SD, user, settings, buttons]
+Monitoring [display, video]
+-EVF / Monitor
+--Surround view [wide, angle, view, safety, margin]
+---☑
+--Zoom position [OHD, PIP]
+---Top left
+---Top center
+---Top right
+---Mid left
+---Eye level
+---Mid center
+---Mid right
+---Bottom left
+---Bottom center
+---Bottom right
+--Anamorphic desqueeze
+---☑
+--Peaking [focus, assist]
+---Peaking mode
+----Aperture
+----Color
+---Peaking level
+----XX
+---Peak offset shift {E61}
+----XX
+---Color {E61}
+----7 color options
+--Settings
+---EVF brightness
+----XX
+---EVF gamma
+----Stadard
+----Lifted
+---EVF power
+----Auto
+----Off
+----On
+---Monitor brightness
+----XX
+---Monitor flip mode
+----Auto
+----Normal
+----Flipped
+--EVF overlays [assist, safety, safe]
+---Frame lines
+----☑
+---Center mark {D76}
+----Off
+----Dot
+----Small Dot
+----Cross
+---Surround mask
+----Black Line
+----Colored Line
+----25% Mask
+----50% Mask
+----75% Mask
+---Status info
+----Off
+----Overlay
+----Safe
+---Status components
+----Info 1
+-----☑
+----Info 2
+-----☑
+----Timecode
+-----☑
+----Audio
+-----☑
+----Lens data
+-----☑
+----Lens focus distance {E92}
+-----☑
+----UDM {E92}
+-----☑
+----Electronic horizon
+-----☑
+--Monitor Overlays [assist, safety, safe]
+---Frame lines
+----☑
+---Center mark
+----Off
+----Dot
+----Small Dot
+----Cross
+---Surround mask
+----Black Line
+----Colored Line
+----Semitransparent mask
+----Lens data
+-----☑
+----Electronic horizon
+-----☑
+----Show numeric values {E105}
+-----☑
+-SDI [vidoe, ouy, signal, client, focus, on board]
+--SDI processing
+---Surround view
+----☑
+---Exposure tool
+----☑
+---Peaking
+----Peaking
+-----☑
+----Peaking mode
+-----Aperture
+-----Color
+----Peaking level
+-----XX
+----Peak offset shift {E61}
+-----XX
+----Color {E61}
+-----7 color options
+---Overlays [assist, safety, safe]
+----Frame lines
+-----☑
+----Center mark {E115}
+-----Off
+-----Dot
+-----Small Dot
+-----Cross
+----Surround mask
+-----Black Line
+-----Colored Line
+-----25% Mask
+-----50% Mask
+-----75% Mask
+----Status info
+-----Off
+-----Overlay
+-----Safe
+----Status components
+-----Info 1
+-----Info 2
+-----Timecode
+-----Audio
+-----Lens data
+-----Lens focus distance {E92}
+-----UDM {E92}
+-----Electronic horizon
+--Anamorphic desqueeze
+---☑
+--SDI 1 format
+---422 1.5 HD
+---422 3G HD
+---444 3G HD
+--SDI 1 frame rate
+---23.98p - 30p
+---50i - 60i
+---23.98psf - 30psf
+--SDI 1 3G level {?}
+---Level X
+--SDI 1 image
+---Clean
+---Processed
+--SDI 2: clone SDI 1
+---☑
+--SDI 2 format
+---422 1.5 HD
+---422 3G HD
+---444 3G HD
+--SDI 2 frame rate
+---23.98p - 30p
+---50i - 60i
+---23.98psf - 30psf
+--SDI 2 3G level {?}
+---Level X
+--SDI 2 image
+---Clean
+---Processed
+-Frame lines [mask, guide, safe, margin, matte]
+--Frame line
+---[users can add and edit options]
+--Frame line color
+---7 color options
+--Frame line intensity
+---1 - 4
+--User rectangles
+---Off
+---Rect 1
+---Rect 2
+---Rect 1+2
+--User rectangle 1
+---Width
+----XXX
+---Height
+----XXX
+---Offset left
+----XXX
+---Offset top
+----XXX
+---Reset all
+--User rectangle 2
+---Width
+----XXX
+---Height
+----XXX
+---Offset left
+----XXX
+---Offset top
+----XXX
+---Reset all
+-Exposure tools [assist, AC]
+--Select EVF/Mon.exp. tool
+---Zebra
+---False Color
+--Select SDI exp. tool
+---Zebra
+---False Color
+--False color mode
+---Monitoring based
+---Log-C based
+--Zebra setup
+---Zebra mode
+----High
+----Mid
+----High + Mid
+---High zebra level
+----XXX%
+---High zebra color
+----7 color options
+---Mid zebra level
+----XXX%
+---Mid zebra range
+----XXX%
+---Mid zebra color
+----7 color options
+--EVF waveform
+---☑
+--EVF waveform size
+---Small
+---Large
+--Monitor waveform
+---☑
+--Monitor waveform size
+---Small
+---Large
+-Color bars
+--☑
+System [body, connectivity]
+-Sensor [soft, sharp]
+--Image sharpness set/active
+---plus 5 to minus 5
+--Image detail set/active
+---plus 5 to minus 5
+--Noise reduction {?}
+---off/on
+--EXT sync
+---Off
+---EXT master
+---EXT sensor slave
+---EXT settings slave
+--EXT sync camera count {D198}
+---XX
+--Genlock sync
+---Off
+---SYNC IN
+---TC IN
+--Sync shift (+0.000 us)
+---XXXXXXX
+--Mirror image
+---Off
+---V
+---H
+---V+H
+--User pixel masking
+---[needs to be installed by user]
+-Fan mode [cooling, air]
+--Regular
+--Rec low
+--Low noise
+-Power [battery, volt, voltage]
+--BAT in warning [battery, volt, voltage]
+---XX V
+-Lens mount settings
+--Focus unit [meter, inch]
+---Lens default
+---Metric
+---Imperial
+--Enable lens mount [data, LDS, servo, power]
+---☑
+-System time + date
+-Buttons + Display
+--Display style
+---Night
+---Day
+--Button brightnes
+---0 - 3
+-Multicam [multiple]
+--Multicam
+---☑
+--SSCP device IP
+---XXX.XXX.XXX.XXX
+--SSCP device port
+---XXXXX
+-Camera access protocol (CAP)
+--CAP server enebled
+---☑
+--CAP server password
+---[user input]
+--CAP client list
+---[user input]
+-Network / WiFi
+--WiFi power
+---☑
+--WiFi mode
+---Client
+---Host
+--WiFi host password {D231}
+---[user input]
+--WiFi network
+---[user input]
+--Wireless region setting
+---World
+--LAN IP mode
+---Static
+---DHCP
+--LAN Static IP
+---XXX.XXX.XXX.XXX
+--LAN static subnet
+---XXX.XXX.XXX.XXX
+-Licensed features
+--[user input]
+-Update
+-Reset electronic horizon
+--Reset
+-Language
+--[user preference]
+Setup
+-User setups installed
+--[user input]
+-User setups on USB
+--[user input]
+-Factory reset
+User buttons
+-Button VF1
+--(UBAM)
+-Button VF2
+--(UBAM)
+-Camera user buttons
+--Button 1
+---(UBAM)
+--Button 2
+---(UBAM)
+--Button 3
+---(UBAM)
+--Button 4 (web)
+---(UBAM)
+--Button 5 (web)
+---(UBAM)
+--Button 6 (web)
+---(UBAM)
+--Button 7 (web)
+---(UBAM)
+--Button 8 (web)
+---(UBAM)
+-WCU user buttons
+--Button 1
+---(UBAM)
+--Button 2
+---(UBAM)
+--Button 3
+---(UBAM)
+--Button 4
+---(UBAM)
+--Button 5
+---(UBAM)
+--Button 6
+---(UBAM)
+-Master grips buttons
+--Button 1
+---(UBAM)
+--Button 2
+---(UBAM)
+--Button 3
+---(UBAM)
+--Button 4
+---(UBAM)
+--Button 5
+---(UBAM)
+--Button 6
+---(UBAM)
+--Button 7
+---(UBAM)
+--Button 8
+---(UBAM)
+--Button 9
+---(UBAM)
+--Button 10
+---(UBAM)
+--Button 11
+---(UBAM)
+--Button 12
+---(UBAM)
+-GPIO user buttons (plug)
+--Button 1
+---(UBAM)
+--Button 2
+---(UBAM)
+--Button 3
+---(UBAM)
+--Button 4
+---(UBAM)
+--Button 5
+---(UBAM)
+--Button 6
+---(UBAM)
+--Button 7
+---(UBAM)
+--Button 8
+---(UBAM)
+--Button 9
+---(UBAM)
+--Button 10
+---(UBAM)
+--Button 11
+---(UBAM)
+--Button 12
+---(UBAM)
+--Button 13
+---(UBAM)
+--Button 14
+---(UBAM)
+-Lens RET (plug)
+--(UBAM)
+Metadata
+-Production
+--[user input]
+-Production company
+--[user input]
+-Director
+--[user input]
+-Cinematographer
+--[user input]
+-Camera Operator
+--[user input]
+-Location
+--[user input]
+-Scene
+--[user input]
+-Take
+--[user input]
+-User info 1
+--[user input]
+-User info 2
+--[user input]
+Electronic Control System (ECS)
+-Radio
+--Power
+---☑
+--Channel
+---0 - 7
+--Status {?}
+---Off/Ready
+--Conected devices {?}
+-Lens data
+--[user input]
+-Calibrate all motor configuration
+-LBUS lens motor configuration
+--Focus motor torque
+---0 - 4
+--Focus motor direction
+---Right
+---Left
+--Focus motor teeth count
+---Auto
+---40t
+---50t
+---60t
+--Iris motor torque
+---0 - 4
+--Iris motor direction
+---Right
+---Left
+--Iris motor teeth count
+---Auto
+---40t
+---50t
+---60t
+--Zoom motor torque
+---0 - 4
+--Zoom motor direction
+---Right
+---Left
+--Zoom motor teeth count
+---Auto
+---40t
+---50t
+---60t
